@@ -117,7 +117,6 @@ Lot is not exists
 
 | Field                    | Type    | Description           |
 |--------------------------|---------|-----------------------|
-| id_lot `required`        | Integer |                       |
 | start_date `required`    | String  | Format is `dd-mm-yyy` |
 | initial_price `required` | Float   | Price for kg          |
 | duration `required`      | Integer | Duration per days     |
