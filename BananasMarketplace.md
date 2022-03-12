@@ -20,7 +20,7 @@
 
 **POST** `/v1/lots`
 
-Request 
+**Request** 
 
 | Field                          | Type    | Description             |
 |--------------------------------|---------|-------------------------|
@@ -29,7 +29,7 @@ Request
 | harvesting_date `required`     | String  | Format is `dd-mm-yyy`   |
 | cultivar `required`            | Strong  | Size range: `100`       |
 
-Response
+**Response**
 
 Status code **201** 
 
@@ -51,7 +51,7 @@ Client or Validation Error - Indicates that the request is not in the correct fo
 
 **PUT** `/v1/lots/{id_lot}`
 
-Request
+**Request**
 
 | Field                          | Type    | Description             |
 |--------------------------------|---------|-------------------------|
@@ -60,7 +60,7 @@ Request
 | harvesting_date `optional`     | String  | Format is `dd-mm-yyy`   |
 | cultivar `optional`            | Strong  | Size range: `100`       |
 
-Response
+**Response**
 
 Status code **204**
 
@@ -87,7 +87,7 @@ Lot is not exists.
 
 **DEL** `/v1/lots/{id_lot}`
 
-Response
+**Response**
 
 Status code **204**
 
@@ -113,7 +113,7 @@ Lot is not exists
 
 **POST** `/v1/lots/{id_lot}/auctions`
 
-Request
+**Request**
 
 | Field                    | Type    | Description           |
 |--------------------------|---------|-----------------------|
@@ -123,7 +123,7 @@ Request
 | duration `required`      | Integer | Duration per days     |
 | currency_code `required` | String  | Size range: `3`       |
 
-Response
+**Response**
 
 Status code **201**
 
@@ -153,13 +153,13 @@ Lot is not exists
 
 **POST** `/v1/lots/{id_lot}/auctions/{id_auction}/bid`
 
-Request
+**Request**
 
 | Field               | Type    | Description       |
 |---------------------|---------|-------------------|
 | price `required`    | Float   | Price for kg      |
 
-Response
+**Response**
 
 Status code **201**
 
@@ -189,7 +189,7 @@ Lot or auction is not exists
 
 **GET** `/v1/lots/{id_lot}/auctions/{id_auction}/bid`
 
-Response
+**Response**
 
 Status code **200**
 
