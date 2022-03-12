@@ -13,8 +13,6 @@ use auto1\User\User;
 require_once realpath(__DIR__) . '/vendor/autoload.php';
 
 $user = new User();
-echo 'Is broken: '.($car->isBroken() ? 'true' : 'false').PHP_EOL;
-echo 'Is scratched: '.($car->isPaintingDamaged() ? 'true' : 'false').PHP_EOL;
 $user->setFirstName('John')
     ->setLastName('Doe')
     ->setEmail('john.doe@example.com');
