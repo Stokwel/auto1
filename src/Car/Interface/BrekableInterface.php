@@ -2,7 +2,7 @@
 
 namespace auto1\Car\Interface;
 
-interface BrokableInterface
+interface BrekableInterface
 {
     public function isBroken(): bool;
 }

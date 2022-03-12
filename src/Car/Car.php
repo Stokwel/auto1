@@ -3,7 +3,7 @@
 namespace auto1\Car;
 
 use auto1\Car\Detail\DetailCollection;
-use auto1\Car\Interface\BrokableInterface;
+use auto1\Car\Interface\BrekableInterface;
 use auto1\Car\Interface\CarInterface;
 use auto1\Car\Interface\ScratchableInterface;
 
@@ -16,7 +16,7 @@ class Car implements CarInterface
         $this->details = $details;
     }
 
-    public function addDetail(BrokableInterface $detail): self
+    public function addDetail(BrekableInterface $detail): self
     {
         $this->details->add($detail);
 
@@ -25,7 +25,7 @@ class Car implements CarInterface
 
     public function isBroken(): bool
     {
-        /** @var BrokableInterface $detail */
+        /** @var BrekableInterface $detail */
         foreach ($this->details as $detail) {
             if ($detail->isBroken()) {
                 return true;
