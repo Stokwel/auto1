@@ -1,0 +1,16 @@
+{
+    "name": "auto1/auto1",
+    "description": "auto1",
+    "type": "project",
+    "require": {
+        "php": ">=8.1",
+        "ramsey/collection": "^1.0"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "auto1\\": "src/"
+        }
+    }
+}
