@@ -16,6 +16,14 @@
 |--------------|------------------|
 | Content-Type | application/json |
 
+### ERROR type
+
+| Field               | Type    | Description |
+|---------------------|---------|-------------|
+| Code `required`     | Integer |             |
+| Name `required`     | String  |             |
+| Message `required`  | String  |             |
+
 ## Add a lot
 
 **POST** `/v1/lots`
@@ -43,9 +51,9 @@ Status code **400**
 
 Client or Validation Error - Indicates that the request is not in the correct format. For example, `weight` is lesser than the minimum value.
 
-| Field                    | Type   | Description             |
-|--------------------------|--------|-------------------------|
-| error_message `required` | String |                         |
+| Field            | Type  | Description             |
+|------------------|-------|-------------------------|
+| Error `required` | Error |                         |
 
 ## Update a lot
 
@@ -70,17 +78,17 @@ Status code **400**
 
 Client or Validation Error - Indicates that the request is not in the correct format. For example, `weight` is lesser than the minimum value.
 
-| Field                    | Type   | Description             |
-|--------------------------|--------|-------------------------|
-| error_message `required` | String |                         |
+| Field            | Type  | Description             |
+|------------------|-------|-------------------------|
+| Error `required` | Error |                         |
 
 Status code **404**
 
 Lot is not exists.
 
-| Field                    | Type   | Description             |
-|--------------------------|--------|-------------------------|
-| error_message `required` | String |                         |
+| Field            | Type  | Description             |
+|------------------|-------|-------------------------|
+| Error `required` | Error |                         |
 
 
 ## Delete a lot
@@ -97,17 +105,17 @@ Status code **400**
 
 Client or Validation Error - Indicates that the request is not in the correct format. For example, lot have not been sell yet.
 
-| Field                    | Type   | Description             |
-|--------------------------|--------|-------------------------|
-| error_message `required` | String |                         |
+| Field            | Type  | Description             |
+|------------------|-------|-------------------------|
+| Error `required` | Error |                         |
 
 Status code **404**
 
 Lot is not exists
 
-| Field                    | Type   | Description |
-|--------------------------|--------|-------------|
-| error_message `required` | String |             |
+| Field            | Type  | Description             |
+|------------------|-------|-------------------------|
+| Error `required` | Error |                         |
 
 ## Start an auction
 
@@ -136,21 +144,21 @@ Status code **400**
 
 Client or Validation Error - Indicates that the request is not in the correct format. For example, `start_date` is incorrect format.
 
-| Field                    | Type   | Description             |
-|--------------------------|--------|-------------------------|
-| error_message `required` | String |                         |
+| Field            | Type  | Description             |
+|------------------|-------|-------------------------|
+| Error `required` | Error |                         |
 
 Status code **404**
 
 Lot is not exists
 
-| Field                    | Type   | Description |
-|--------------------------|--------|-------------|
-| error_message `required` | String |             |
+| Field            | Type  | Description             |
+|------------------|-------|-------------------------|
+| Error `required` | Error |                         |
 
 ## Make a bid
 
-**POST** `/v1/lots/{id_lot}/auctions/{id_auction}/bid`
+**POST** `/v1/lots/{id_lot}/auctions/{id_auction}/bids`
 
 **Request**
 
@@ -172,21 +180,21 @@ Status code **400**
 
 Client or Validation Error - Indicates that the request is not in the correct format.
 
-| Field                    | Type   | Description             |
-|--------------------------|--------|-------------------------|
-| error_message `required` | String |                         |
+| Field            | Type  | Description             |
+|------------------|-------|-------------------------|
+| Error `required` | Error |                         |
 
 Status code **404**
 
 Lot or auction is not exists
 
-| Field                    | Type   | Description |
-|--------------------------|--------|-------------|
-| error_message `required` | String |             |
+| Field            | Type  | Description             |
+|------------------|-------|-------------------------|
+| Error `required` | Error |                         |
 
 ## Get a list of bids
 
-**GET** `/v1/lots/{id_lot}/auctions/{id_auction}/bid`
+**GET** `/v1/lots/{id_lot}/auctions/{id_auction}/bids`
 
 **Response**
 
@@ -200,9 +208,8 @@ Status code **404**
 
 Lot or auction is not exists
 
-| Field                    | Type   | Description |
-|--------------------------|--------|-------------|
-| error_message `required` | String |             |
-
+| Field            | Type  | Description             |
+|------------------|-------|-------------------------|
+| Error `required` | Error |                         |
 
 
